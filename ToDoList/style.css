@@ -1,0 +1,55 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color:cornsilk;
+}
+
+.container{
+    margin : 10% ;  
+    padding: 10px;
+    margin-left: 10%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem ;
+    min-height: 62% ;
+    min-width: 70%;
+    border: 5px solid purple;
+}
+
+.Todocontainer , .todotopic{
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr ;
+    height: auto;
+    width: 100%;
+    gap : 10px ;
+    margin: 10px ;
+    margin-bottom: 0;
+    padding: 30px;
+    padding-bottom: 0;
+}
+
+.todoName , .todoDate {
+    font-size: 1rem ;
+    padding: 10px;
+}
+
+.AddButton {
+    padding: 10px ;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: green;
+    border: none;
+    cursor: pointer;
+}
+
+.DeleteButton {
+    padding: 10px ;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    background-color: red;
+    border: none;
+    cursor: pointer;
+}
