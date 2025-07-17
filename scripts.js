@@ -2,14 +2,22 @@ const TodoList = [] ;
 
 function renderHTML() {
     let todoListHtml = '';
-    TodoList.forEach(function(value , index){
+    TodoList.forEach((value , index) =>{
         todoListHtml +=  `
         <div>${value.name}</div>
         <div>${value.dueDate}</div>
-        <button onclick="deleteTodo(${index});" class = "DeleteButton">Delete</button  >` ;
-    })
+        <button class = "DeleteButton">Delete</button  >` ;
+    });
     document.querySelector('.Todocontainer').innerHTML = todoListHtml ;
 }
+
+document.querySelectorAll('.Todocontainer').forEach(
+    (value , index) => {
+        value.addEventListener('click' , ()=> {
+            deleteTodo(index);
+        })
+    }
+)
 
 function addTodo(){
     const inputfield = document.querySelector('.todoName').value ;
