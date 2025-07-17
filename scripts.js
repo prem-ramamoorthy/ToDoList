@@ -2,12 +2,12 @@ const TodoList = [] ;
 
 function renderHTML() {
     let todoListHtml = '';
-    for(let i = 0 ; i < TodoList.length ; i++){
+    TodoList.forEach(function(value , index){
         todoListHtml +=  `
-        <div>${TodoList[i].name}</div>
-        <div>${TodoList[i].dueDate}</div>
-        <button onclick="deleteTodo(${i});" class = "DeleteButton">Delete</button  >` ;
-    }
+        <div>${value.name}</div>
+        <div>${value.dueDate}</div>
+        <button onclick="deleteTodo(${index});" class = "DeleteButton">Delete</button  >` ;
+    })
     document.querySelector('.Todocontainer').innerHTML = todoListHtml ;
 }
 
